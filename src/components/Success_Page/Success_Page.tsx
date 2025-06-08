@@ -1,4 +1,5 @@
 import styles from './Success_Page.module.scss'
+import Typewriter from 'typewriter-effect'
 
 interface Success_PageProps {
   mainMessage: string
@@ -7,7 +8,9 @@ interface Success_PageProps {
 const Success_Page = ({ mainMessage }: Success_PageProps) => (
   <main className="container">
     <div className={styles.success__content}>
-      <p>Éxito!</p>
+      <Typewriter onInit={(typewriter) => {
+        typewriter.typeString(mainMessage).start()
+      }}/>
     </div>
   </main>
 );

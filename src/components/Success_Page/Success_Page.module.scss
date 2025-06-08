@@ -1,12 +1,22 @@
 @use '../../styles/base/buttons' as *;
+@use '../../styles/base/variables' as *;
 
 main {
     display: flex;
     justify-content: center;
     align-items: center;
 
+    .ico {
+        font-size: 7rem;
+        align-self: flex-start;
+    }
+
     .success__content {
+        text-align: center;
+        font-size: 3.5rem;
+        padding: 2rem;
         margin: 3rem auto;
         border: 1px solid lightgrey;
+        box-shadow: 10px 10px 30px 2px $primary-font-color;
     }
 }
