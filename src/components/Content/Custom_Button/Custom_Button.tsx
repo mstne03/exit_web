@@ -1,6 +1,4 @@
 import styles from './Custom_Button.module.scss'
-
-
 interface Custom_ButtonProps {
   str : string
   onClick: () => void;

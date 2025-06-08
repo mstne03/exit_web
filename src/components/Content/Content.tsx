@@ -9,9 +9,10 @@ interface ContentProps {
   str1: string
   str2: string
   rest: string[]
+  setPageState: (state: number) => void;
 }
 
-const Content = ({ imgSrc, str1, str2, rest }: ContentProps) => {
+const Content = ({ imgSrc, str1, str2, rest, setPageState }: ContentProps) => {
   const [show, setShow] = useState(false)
   const [secondShow, setSecondShow] = useState(false)
   const [visible, setVisible] = useState([false, false, false])
@@ -20,10 +21,10 @@ const Content = ({ imgSrc, str1, str2, rest }: ContentProps) => {
     const timers: NodeJS.Timeout[] = []
 
     timers.push(setTimeout(() => setShow(true), 2500))
-    timers.push(setTimeout(() => setSecondShow(true), 7000))
+    timers.push(setTimeout(() => setSecondShow(true), 8000))
     timers.push(setTimeout(() => setVisible(() => [true, false, false]), 2500))
-    timers.push(setTimeout(() => setVisible(() => [true, true, false]), 3300))
-    timers.push(setTimeout(() => setVisible(() => [true, true, true]), 4300))
+    timers.push(setTimeout(() => setVisible(() => [true, true, false]), 3800))
+    timers.push(setTimeout(() => setVisible(() => [true, true, true]), 5100))
 
     return () => timers.forEach(clearTimeout)
   }, [])
@@ -35,7 +36,7 @@ const Content = ({ imgSrc, str1, str2, rest }: ContentProps) => {
           <Typewriter
             onInit={(typewriter) => {
               typewriter
-                .changeDelay(0.2)
+                .changeDelay(25)
                 .typeString(str1)
                 .pauseFor(500)
                 .typeString(str2)
@@ -55,14 +56,19 @@ const Content = ({ imgSrc, str1, str2, rest }: ContentProps) => {
                 className={styles.img}
               />
               
-              <Custom_Button onClick={() => {}} str={`${i + 1}`} />
+              <Custom_Button onClick={() => {
+                if (i === 0) setPageState(2)
+                else setPageState(3)
+              }} str={`${i + 1}`} />
 
               <div className={styles.door__content}>
                 {visible[i] && (
                   <div className={styles.door__content_text}>
                     <Typewriter
                       onInit={(typewriter) => {
-                        typewriter.typeString(text).start()
+                        typewriter.changeDelay(70)
+                                  .typeString(text)
+                                  .start()
                       }}
                     />
                   </div>

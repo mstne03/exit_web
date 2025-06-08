@@ -1,6 +1,6 @@
-@use '../../../styles/base/variables';
+@use '../../../styles/base/variables' as *;
 
 .riddle__container {
     border-color: aliceblue;
-    color: variables.$riddle-color;
+    color: $riddle-color;
 }

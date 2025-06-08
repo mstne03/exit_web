@@ -1,4 +1,4 @@
-@use '../../styles/base/variables';
+@use '../../styles/base/variables' as *;
 
 @media only screen /*and (max-with: 480px)*/ {
     .loading__container {

@@ -1,5 +1,5 @@
-@use '../../styles/base/buttons';
-@use '../../styles/base/variables';
+@use '../../styles/base/buttons' as *;
+@use '../../styles/base/variables' as *;
 
 @media only screen /*and (max-width: 480px)*/ {
     main {
@@ -127,7 +127,7 @@
                 max-width: 100px;
 
                 .img {
-                    //@include buttons.pic-animation();
+                    //@include pic-animation();
                     margin-bottom: 2rem;
                 }
 
@@ -151,7 +151,7 @@
         }
 
         .riddle {
-            box-shadow: 10px 10px 30px 2px variables.$primary-font-color;
+            box-shadow: 10px 10px 30px 2px $primary-font-color;
             padding: 3rem;
             text-align: center;
             border: 1px solid white;

@@ -14,6 +14,7 @@ html {
         background-color: black;
         color: variables.$primary-font-color;
         overflow-x: hidden;
+        overflow-y: hidden;
         font-family: variables.$primary-font;
         font-size: 1.6rem;
         margin: 0 auto;
@@ -48,6 +49,7 @@ html {
         }
 
         span {
+            line-height: 1.35;
             text-align: center;
         }
 

@@ -1,4 +1,4 @@
-@use '../../styles/base/variables';
+@use '../../styles/base/variables' as *;
 
 @media only screen /*and (max-width: 480px)*/ {
     header {
@@ -10,7 +10,7 @@
         .container__logo {
             margin-top: 3rem;
             max-width: 150px;
-            filter: drop-shadow(5px 10px 10px variables.$shadow-color);
+            filter: drop-shadow(5px 10px 10px $shadow-color);
             
             &_logo {
                 opacity: 0;

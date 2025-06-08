@@ -9,10 +9,10 @@ const Riddle = ({ str } : RiddleProps) => (
   <div className={styles.riddle__container}>
     <div className={styles.riddle__container_content}>
       <Typewriter onInit={(typewriter) => { 
-        typewriter.changeDelay(.2).typeString(str).start()
-       }} />
+        typewriter.changeDelay(25).typeString(str).start()
+      }} />
     </div>
-  </div>  
+  </div>
 );
 
 export default Riddle;
