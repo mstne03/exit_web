@@ -1,0 +1,11 @@
+@use '../../../styles/base/buttons';
+@use '../../../styles/base/variables';
+
+.custom__button {
+    @include buttons.pic-animation();
+    @include buttons.button-colors(variables.$primary-font-color, variables.$secondary-font-color);
+
+    border-radius: .5rem;
+    border-color: 1px solid transparent;
+    padding: .5rem 2.5rem;
+}

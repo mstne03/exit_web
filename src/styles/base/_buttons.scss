@@ -1,0 +1,20 @@
+@mixin pic-animation() {
+    transition: transform .2s ease;
+    
+    &:hover {
+        transform: scale(1.2);
+        cursor: pointer;
+    }
+}
+
+@mixin button-colors($primary, $secondary) {
+    background-color: $primary;
+    color: $secondary;
+    border-color: 1px solid transparent;
+
+    &:hover {
+        background-color: $secondary;
+        color: $primary;
+        border-color: $primary;
+    }
+}

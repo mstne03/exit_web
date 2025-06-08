@@ -1,0 +1,6 @@
+@use '../../../styles/base/variables';
+
+.riddle__container {
+    border-color: aliceblue;
+    color: variables.$riddle-color;
+}

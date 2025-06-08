@@ -1,0 +1,13 @@
+@use '../../styles/base/variables';
+
+@media only screen /*and (max-with: 480px)*/ {
+    .loading__container {
+        display: flex;
+        justify-content: flex-start;
+        
+        &_content {
+            margin: 2rem 4rem;
+            font-size: 15px;
+        }
+    }
+}
