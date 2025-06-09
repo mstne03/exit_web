@@ -16,10 +16,10 @@ const Header = ({ imgSrc, pageState, setPageState }: HeaderProps) => {
         <div className={styles.ico} onClick={() => {
           setPageState(1)
         }}>
-          <span>&#129168; atrás</span>
+          <span className={pageState === 3 ? styles.error_text : ''}>&#129168; atrás</span>
         </div>
       )}
-      <span className={styles.container__logo}>
+      <span className={pageState === 3 ? styles.container__logo_error : styles.container__logo}>
         <img
           src={ imgSrc }
           alt="exit_logo"

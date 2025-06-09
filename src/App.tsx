@@ -3,6 +3,7 @@ import Header from './components/Header/Header'
 import Loading_content from './components/Loading_content/Loading_content'
 import Content from './components/Content/Content'
 import Success_Page from './components/Success_Page/Success_Page'
+import Error_Page from './components/Error_Page/Error_Page'
 import exitLogo from './assets/img/exit-logo.svg'
 import doorImg from './assets/img/puerta.svg'
 
@@ -43,7 +44,7 @@ function App() {
       )}
 
       {pageState === 2 && <Success_Page mainMessage={"Enhorabuena! Has sobrevivido a EX!T"}/>}
-      {pageState === 3 && <p>Fracaso...</p>}
+      {pageState === 3 && <Error_Page mainMessage={"Error! Has fallado la pregunta"}/>}
     </>
   )
 }

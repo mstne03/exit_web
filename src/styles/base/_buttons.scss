@@ -20,10 +20,14 @@
     }
 }
 
-@mixin glitch-animation($url:none, $duration: auto, $delay: auto) {
+@mixin glitch-animation($url:none, $duration: auto, $delay: auto, $infinite: 0) {
     @if ($duration != auto and $delay != auto) {
         animation-duration: $duration;
         animation-delay: $delay;
+    }
+
+    @if ($infinite != 0) {
+        animation-iteration-count: infinite;
     }
 
     opacity: 0;
