@@ -42,7 +42,7 @@ function App() {
         />
       )}
 
-      {pageState === 2 && <Success_Page mainMessage={"Felicidades! Has entrado en EX!T"}/>}
+      {pageState === 2 && <Success_Page mainMessage={"Enhorabuena! Has sobrevivido a EX!T"}/>}
       {pageState === 3 && <p>Fracaso...</p>}
     </>
   )

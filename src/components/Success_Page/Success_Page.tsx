@@ -6,12 +6,16 @@ interface Success_PageProps {
 }
 
 const Success_Page = ({ mainMessage }: Success_PageProps) => (
-  <main className="container">
-    <div className={styles.success__content}>
-      <Typewriter onInit={(typewriter) => {
-        typewriter.typeString(mainMessage).start()
-      }}/>
-    </div>
+  <main className={`container ${styles.success__container}`}>
+    <section className={styles.success__content}>
+      <div className={styles.success__content_text}>
+        <Typewriter onInit={(typewriter) => {
+          typewriter.changeDelay(30)
+                    .typeString(mainMessage)
+                    .start()
+        }}/>
+      </div>
+    </section>
   </main>
 );
 
