@@ -16,7 +16,7 @@ function App() {
 
   return (
     <>
-      <Header imgSrc={ exitLogo }/>
+      <Header imgSrc={ exitLogo } pageState={ pageState } setPageState={setPageState}/>
 
       {pageState === 0 && (
         <Loading_content 
@@ -38,7 +38,7 @@ function App() {
             "te llevará a la salida:"
           }
           rest={["NO SOY LA CORRECTA","LA PUERTA 1 MIENTE","LA 2 ES LA CORRECTA"]}
-          setPageState={setPageState}
+          setPageState={ setPageState }
         />
       )}
 
