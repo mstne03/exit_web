@@ -20,7 +20,12 @@
     }
 }
 
-@mixin glitch-animation($url:'') {
+@mixin glitch-animation($url:none, $duration: auto, $delay: auto) {
+    @if ($duration != auto and $delay != auto) {
+        animation-duration: $duration;
+        animation-delay: $delay;
+    }
+
     opacity: 0;
     animation: glitch 0.6s steps(1) forwards;
     transform: translate(0);

@@ -24,12 +24,26 @@
         
         .container__logo {
             margin-top: 3rem;
-            max-width: 150px;
+            max-width: 15rem;
             filter: drop-shadow(5px 10px 10px $shadow-color);
             
             &_logo {
                 @include glitch-animation('../../assets/img/exit-logo.svg');
             }
+        }
+    }
+}
+
+@media (max-width: 430px) {
+    .container {
+        margin-bottom: .5rem;
+
+        .ico {
+            font-size: 1.6rem;
+        }
+
+        .container__logo {
+            max-width: 12rem;
         }
     }
 }

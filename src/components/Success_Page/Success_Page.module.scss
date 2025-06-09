@@ -1,21 +1,33 @@
 @use '../../styles/base/buttons' as *;
 @use '../../styles/base/variables' as *;
 
-.success__container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+@media only screen {
+    .success__container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
 
-    @include glitch-animation('@/assets/img/exit-logo_green.svg');
+        @include glitch-animation('@/assets/img/exit-logo_green.svg', .4s, .4s);
 
-    .success__content {
-        &_text {
-            text-align: center;
-            font-size: 3rem;
-            padding: 2rem;
-            margin: 3rem 2rem;
-            border: 3px solid $primary-font-color;
-            box-shadow: 10px 10px 30px 2px $primary-font-color;
+        .success__content {
+            &_text {
+                text-align: center;
+                font-size: 3rem;
+                padding: 2rem;
+                margin: 3rem 2rem;
+                border: 3px solid $primary-font-color;
+                box-shadow: 10px 10px 30px 2px $primary-font-color;
+            }
+        }
+    }
+}
+
+@media (max-width: 430px) {
+    .success__container {
+        .success__content {
+            &_text {
+                font-size: 2.6rem;
+            }
         }
     }
 }

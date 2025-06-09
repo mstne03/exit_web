@@ -1,6 +1,9 @@
 @use '../../../styles/base/variables' as *;
+@use '../../../styles/base/buttons' as *;
 
 .riddle__container {
     border-color: aliceblue;
     color: $riddle-color;
+
+    @include glitch-animation();
 }

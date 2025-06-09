@@ -21,7 +21,7 @@ const Content = ({ imgSrc, str1, str2, rest, setPageState }: ContentProps) => {
     const timers: NodeJS.Timeout[] = []
 
     timers.push(setTimeout(() => setShow(true), 2500))
-    timers.push(setTimeout(() => setSecondShow(true), 8000))
+    timers.push(setTimeout(() => setSecondShow(true), 7200))
     timers.push(setTimeout(() => setVisible(() => [true, false, false]), 2500))
     timers.push(setTimeout(() => setVisible(() => [true, true, false]), 3800))
     timers.push(setTimeout(() => setVisible(() => [true, true, true]), 5100))
